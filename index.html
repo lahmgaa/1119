@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" >
+    <title>hello,moody</title>
+    <link href="https://fonts.googleapis.com/css?family=Jua&amp;subset=korean" rel="stylesheet">
+    <style>
+        #monitor {width: 100px; height: 40px; background: red; position: fixed; right: 0px; line-height: 40px; color: white; z-index: 5; opacity: 1;}
+
+
+        body{background-color: white; height: 5000px;}
+        #div1 {width: 225px; height: 225px; position: absolute; top: 300px; left: calc(50% - 112.5px); z-index: 2;}
+        #moody {width: 225px; height: 225px; }
+        #moody:hover {cursor: pointer;}
+        #div2 {width: 225px; height: 225px; position: absolute; top: 300px; left: calc(50% - 112.5px); opacity: 1;}
+        #moody2 {width: 225px; height: 225px;  opacity: 1;}
+        #div3 {width: 100%; height: 412px; position: absolute; top: 0; left: 0; background-color: #ff8dc1; z-index: -1; opacity: 0; transition: 0.5s;}
+        #div4 {width: 100%; height: 10000px; position: absolute; top: 412px; left: 0; background-color: #0b2d57; z-index: -1; opacity: 0; transition: 0.5s;}
+
+        #slo1 {width: 450px; height: 50px; position: absolute;  color: white; font-size: 2.5em;
+            font-family: 'Jua', sans-serif; line-height: 50px; text-align: center; top: 150px; left: calc(50% - 225px); opacity: 0;}
+        #slo2 {width: 450px; height: 50px; position: absolute;  color: white; font-size: 2.5em;
+            font-family: 'Jua', sans-serif; line-height: 50px; text-align: center; top: 620px; left: calc(50% - 225px); opacity: 0;}
+
+        #slo3 {width: 800px; height: 200px; position: absolute;  color: white; top: 1800px; left: calc(50% - 400px);
+            font-family: 'Jua', sans-serif; font-size: 3em; text-align: center; line-height: 70px;}
+        #div_mock {width: 300px; height: auto; position: absolute;  top: 2000px; left: calc(50% - 150px);}
+        #mock {width: 100%; height: auto;}
+		#mock_ex1 {width: 400px; height: auto; position: absolute; color: white;
+			font-family: 'Jua', sans-serif; top: 2800px; left: calc(20% - 200px); font-size: 2em; line-height: 50px;  }
+		#mock_ex2 {width: 400px; height: auto; position: absolute; color: white;
+			font-family: 'Jua', sans-serif; top:4000px; left: calc(80% - 200px); font-size: 2em; line-height: 50px;  }
+
+        #div_mock2 {width: 300px; height: auto; position: absolute;  top: 5600px; left: calc(50% - 150px); z-index: 2;}
+        #mock2 {width: 100%; height: auto;}
+        #div_mock3 {width: 300px; height: auto; position: absolute;  top: 5600px; left: calc(50% - 150px); }
+        #mock3 {width: 100%; height: auto;}
+        #div_mock4 {width: 300px; height: auto; position: absolute;  top: 5600px; left: calc(50% - 150px);}
+        #mock4 {width: 100%; height: auto;}
+        #hello {width: 1100px; height: auto; position: absolute; color: white;
+			font-family: 'Jua', sans-serif; top:8300px; left: calc(50% - 550px); font-size: 4em; line-height: 80px; text-align: center;}
+       
+    </style>
+</head>
+
+<body>
+    <div id="monitor"></div>
+
+    <div id="div1"><img src="moody1.png" id="moody"> 
+    </div> 
+    <div id="div2"> <img src="moody2.png" id="moody2"> </div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="slo1">재택근무자에게 효율을!</div>
+    <div id="slo2">집돌이 집순이에게 자유를!</div>
+
+    <div id="slo3">좁아지는 집에서 분위기 변화로 <br>근무의 공간과 여가의 공간을 나누어보세요.</div>
+    <div id="div_mock"><img src="mock.png" id="mock" width="746" height="1492"></div>
+	<div id="mock_ex1">
+		디스플레이 서비스 'moody'는 <br> 디스플레이의 공유와 연동을 더욱 자유롭게 해주고 무드(mood)의 변화로
+		집을 근무의 적합한 <br> 분위기와 휴식과 여가를 즐기는데 적합한 분위기로 바꿔줍니다.
+	</div>
+	<div id="mock_ex2">
+		물리적으로 공간을 구분지을 수 없거나 여러 디스플레이를 <br> 사용하지만 불편함을 느낀다면 moody 를 사용해 보세요.
+    </div>
+    
+    <div id="div_mock2"><img src="mock2.png" id="mock2" width="746" height="1492"></div>
+    <div id="div_mock3"><img src="mock3.png" id="mock3" width="746" height="1492"></div>
+    <div id="div_mock4"><img src="mock4.png" id="mock4" width="746" height="1492"></div>
+
+    <div id="hello">
+        "안녕, 무디!"<br> <br>음성인식 서비스와 모바일 어플리케이션으로 손쉽게 무디를 사용할 수 있습니다. 한층 더 <br> 발전된 인공지능을 탑재한 무디는 언제나 <br> 여러분의 말을 들을 준비가 되어있습니다. <br> 음성인식 서비스를 사용하기 어렵다면 모바일 어플리케이션으로 무디를 경험해보세요.
+    </div>
+    
+
+<script>
+    window.onscroll = function(){
+        var t = document.documentElement.scrollTop;
+        monitor.innerHTML = t + "px";
+
+        if (t < 1800){
+			div4.style.background = "#0b2d57"
+			div_mock.style.position = "absolute";
+			div_mock.style.top = "2000px";
+        }else if(t < 3864){
+            div4.style.background = "#0f243b"
+			div_mock.style.position = "fixed";
+			div_mock.style.top = "150px";
+        }else if(t < 4100){
+            div4.style.background = "#0c1823"
+			div_mock.style.position = "absolute";
+			div_mock.style.top = "4014px";
+		}else if(t<5400){
+			div4.style.background = "#0c1823"
+            div_mock2.style.position = "absolute";
+            div_mock2.style.top = "5600px";
+            div_mock3.style.position = "absolute";
+            div_mock3.style.top = "5600px";
+            div_mock4.style.position = "absolute";
+            div_mock4.style.top = "5600px";
+		}else if(t<6000){
+            div_mock2.style.position = "fixed";
+            div_mock2.style.top = "150px";
+            div_mock3.style.position = "fixed";
+            div_mock3.style.top = "150px";
+            div_mock4.style.position = "fixed";
+            div_mock4.style.top = "150px";
+            div_mock3.style.left = "calc(50% - 150px)";
+            div_mock4.style.left = "calc(50% - 150px)";
+            div_mock3.style.transition = "0s";
+            div_mock4.style.transition = "0s";
+        }else if(t<6300){
+            div_mock3.style.left = "calc(50% - 150px)";
+            div_mock4.style.left = "calc(50% - 150px)";
+            div_mock3.style.transition = "0.5s";
+            div_mock4.style.transition = "0.5s";
+        }else if(t<7200){
+            div_mock2.style.position = "fixed";
+            div_mock2.style.top = "150px";
+            div_mock3.style.position = "fixed";
+            div_mock3.style.top = "150px";
+            div_mock4.style.position = "fixed";
+            div_mock4.style.top = "150px";
+            div_mock3.style.left = "calc(30% - 150px)";
+            div_mock4.style.left = "calc(70% - 150px)";
+            div_mock3.style.transition = "0.5s";
+            div_mock4.style.transition = "0.5s";
+        }else if(t<7300){
+            div_mock2.style.position = "absolute";
+            div_mock2.style.top = "7350px";
+            div_mock3.style.position = "absolute";
+            div_mock3.style.top = "7350px";
+            div_mock4.style.position = "absolute";
+            div_mock4.style.top = "7350px";
+            div_mock3.style.transition = "0s";
+            div_mock4.style.transition = "0s";
+            div4.style.background = "#0c1823"
+        }else if(t<10000){
+            div4.style.background = "#0c1216"
+            }
+    }
+
+    var toggle = "off";
+
+    moody.onclick = function(){
+        if(toggle == "off"){
+            div1.style.opacity = 0;
+            div2.style.opacity = 1;
+            div3.style.opacity = 1;
+            div4.style.opacity = 1;
+            slo1.style.opacity = 1;
+            slo2.style.opacity = 1;
+
+            toggle = "on";
+        }else{
+            div1.style.opacity = 1;
+            div2.style.opacity = 0;
+            div3.style.opacity = 0;
+            div4.style.opacity = 0;
+            slo1.style.opacity = 0;
+            slo2.style.opacity = 0;
+
+            toggle = "off";
+
+        }
+    }
+</script>
+</body>
+
+</html>
